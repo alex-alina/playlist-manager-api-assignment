@@ -1,0 +1,16 @@
+{
+  "name": "spotify-api-hw",
+  "version": "1.0.0",
+  "description": "an API to manage your playlists with different songs, stored in a postgres database",
+  "main": "index.js",
+  "author": "alina rusu",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^3.0.2",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.4.0",
+    "pg": "7.4.3",
+    "sequelize": "^4.41.2"
+  }
+}
