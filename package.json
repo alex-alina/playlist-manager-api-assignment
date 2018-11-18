@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "alina rusu",
   "license": "MIT",
+  "scripts": {
+    "start": "node ."
+  },
   "dependencies": {
     "bcrypt": "^3.0.2",
     "body-parser": "^1.18.3",
