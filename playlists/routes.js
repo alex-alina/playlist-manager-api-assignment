@@ -1,7 +1,8 @@
 const { Router } = require('express')
 const Playlist = require('./model')
-const User = require('../users/model')
+// const User = require('../users/model')
 const auth = require('../auth/middleware')
+
 
 const router = new Router()
 
@@ -46,7 +47,7 @@ router.get('/playlists/:id', auth, (req, res, next) => {
     .findOne({
       where: {
         id: req.params.id,
-        userId: req.user.id
+        userId: req.user.id,
       }
     })
     .then(playlist => {
@@ -55,7 +56,15 @@ router.get('/playlists/:id', auth, (req, res, next) => {
           message: `Playlist does not exist`
         })
       }
-      return res.send(playlist)
+      return playlist.getSongs()
+        .then((songs) => res.send(
+          {
+            id: playlist.id,
+            userId: playlist.userId,
+            name: playlist.name,
+            songs: songs
+          })
+        )
     })
     .catch(error => next(error))
 })
