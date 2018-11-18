@@ -27,6 +27,6 @@ const Song = sequelize.define('songs', {
     tableName: 'songs'
   })
 
-  // Song.belongsTo(Playlist)
+ 
 
 module.exports = Song
