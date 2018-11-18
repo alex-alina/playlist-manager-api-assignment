@@ -1,6 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-// const customersRouter = require('./customers/routes')
+const playlistsRouter = require('./playlists/routes')
 // const companiesRouter = require('./companies/routes')
 const usersRouter = require('./users/routes')
 const authRouter = require('./auth/routes')
@@ -10,7 +10,7 @@ const port = process.env.PORT || 4000
 
 app
   .use(bodyParser.json())
-  // .use(customersRouter)
+  .use(playlistsRouter)
   // .use(companiesRouter)
   .use(usersRouter)
   .use(authRouter)

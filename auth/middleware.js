@@ -11,7 +11,6 @@ function auth(req, res, next) {
         .findById(data.userId)
         .then(user => {
           if (!user) return next('User does not exist')
-
           req.user = user
           next()
         })
