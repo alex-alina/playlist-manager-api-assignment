@@ -27,6 +27,4 @@ const Song = sequelize.define('songs', {
     tableName: 'songs'
   })
 
- 
-
 module.exports = Song
