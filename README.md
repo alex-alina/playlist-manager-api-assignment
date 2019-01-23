@@ -44,7 +44,7 @@ http POST https://fathomless-caverns-70194.herokuapp.com/playlists Authorization
 * You need a working Postgres database that is preferrably empty and running 
 * Install the dependencies using `yarn install`
 * Start the server using `nodemon .`
-* Access enpoints with HTTPie commands on `localhost:4000`
+* Access endpoints with HTTPie commands on `localhost:4000`
 
 
 ## License
